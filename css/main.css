@@ -1,0 +1,154 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	min-height: 100%;
+	width: 100%;
+	display: table;
+	padding: 1em 0;
+	background-color: white;
+	color: #1C140D;
+}
+
+button {
+	background-color: #CBE86B;
+	border: none;
+	padding: 9px 16px;
+	color: #1C140D;
+	border-radius: 2px;
+}
+
+[disabled="disabled"] {
+	opacity: .5;
+}
+
+input[type="text"],
+input[type="datetime"] {
+	padding: 8px 10px;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-shadow: inset 0 1px 3px #eee;
+	border-radius: 3px;
+}
+
+input.invalid {
+	border-color: #f00;
+}
+
+input.valid {
+	border-color: #070;
+}
+
+.modal {
+	display: none;
+}
+
+.initial {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.main {
+	display: table;
+	border-spacing: 1em 0;
+	width: 100%;
+}
+
+.box {
+	display: table-cell;
+	vertical-align: top;
+	margin: 0;
+	padding: 0;
+}
+
+.side.box {
+	width: 25%;
+}
+
+ul.list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul.list li {
+	padding: 1em;
+	margin-top: .5em;
+	background-color: #F2E9E1;
+}
+
+ul.list li.none {
+	background-color: white;
+	border: 1px solid #ccc;
+}
+
+ul.calendar.list li {
+	position: relative;
+	cursor: pointer;
+}
+
+ul.calendar.list li.selected {
+	box-shadow: inset 0 0 0 1px red;
+}
+
+ul.calendar.list li:first-child {
+	margin-top: 0;
+}
+
+i.orb {
+	display: block;
+	position: absolute;
+	right: 1.3em;
+	bottom: 1.3em;
+	width: 24px;
+	height: 10px;
+	border-radius: 5px;
+}
+
+h2 {
+	text-transform: uppercase;
+	font-size: 33px;
+	margin: .5em 0;
+}
+
+h2:first-child {
+	margin-top: 0;
+}
+
+h2.events {
+	position: relative;
+}
+
+h2.events form {
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-weight: normal;
+	text-transform: none;
+	font-size: 18px;
+}
+
+h3 {
+	margin: 0 0 1em;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+ul.event.list li h4,
+ul.event.list li p {
+	margin: 0;
+	padding: 0;
+}
+
+
+ul.event.list li:first-child {
+	margin-top: 0;
+}

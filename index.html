@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Mobiquity Challenge</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+		<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/pikaday.css">
+	</head>
+	<body>
+		<script type="text/template" class="no-calendars template">
+			<li class="none">
+				No events found
+			</li>
+		</script>
+	
+		<script type="text/template" class="calendar template">
+			<i class="orb" style="background-color: <%= backgroundColor %>"></i> <%= summary %>
+		</script>
+
+		<script type="text/template" class="no-events template">
+			<li class="none">
+				No events found
+			</li>
+		</script>
+		
+		<script type="text/template" class="event template">
+			<h4>
+				<%= title %>
+			</h4>
+			<p>
+				<%= date %>
+			</p>
+		</script>
+		
+		<div class="create modal">
+
+		</div>
+		
+		<div class="initial">
+			<h3>
+				Mobiquity Code Challenge
+			</h3>
+			<button id="auth" disabled="disabled">Authorize with Google</button>
+		</div>
+	
+		<div class="main" style="display: none;">
+			<div class="side box">
+				<h2>Calendars</h2>
+				
+				<ul class="calendar list"></ul>
+			</div>
+			
+			<div class="content box">
+				<div id="events">
+					<div id="lists">
+						<h2 class="date events">
+							<span>Today's Events</span>
+							
+							<form id="dateSelect" action="#">
+								<input id="date" type="datetime" />	
+
+								<button id="change">Go</button>					
+							</form>							
+						</h2>
+						<ul class="date event list"></ul>
+						
+						<h2 class="all events">
+							All Events
+							
+							<form id="createEvent" action="#">	
+								<input id="summary" type="text" placeholder="Event title" />
+								<input id="startDate" type="datetime" placeholder="Start date" />	
+								<input id="endDate" type="datetime" placeholder="End date" />	
+
+								<button id="create" disabled="disabled">Create</button>
+
+							</form>
+						</h2>
+						<ul class="all event list"></ul>
+					</div>
+				</div>				
+			</div>
+		</div>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-dateFormat/1.0/jquery.dateFormat.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/simplemodal/1.4.4/jquery.simplemodal.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+		<script src="https://apis.google.com/js/client.js"></script>
+		<script type="text/javascript" src="js/gapi.js"></script>	
+		
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+		<script type="text/javascript" src="js/lib/pikaday.js"></script>
+		
+		<script type="text/javascript" src="js/models/calendar.js"></script>
+		<script type="text/javascript" src="js/models/event.js"></script>
+		
+		<script type="text/javascript" src="js/collections/calendars.js"></script>
+		<script type="text/javascript" src="js/collections/events.js"></script>
+		
+		<script type="text/javascript" src="js/views/calendar.js"></script>
+		<script type="text/javascript" src="js/views/calendars.js"></script>
+		<script type="text/javascript" src="js/views/event.js"></script>
+		<script type="text/javascript" src="js/views/events.js"></script>
+		
+		<script type="text/javascript" src="js/gapi.js"></script>	
+		<script type="text/javascript" src="js/app.js"></script>		
+	</body>
+</html>
